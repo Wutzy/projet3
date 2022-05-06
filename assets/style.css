@@ -31,7 +31,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #eaeaea; /* Just to visualize the extent */ 
+    background: #eaeaea;
     animation: fadeout 0.1s;  
     animation-delay: 3s;
     animation-fill-mode: forwards;
@@ -134,16 +134,6 @@ p{
     }
 }
 
-@keyframes disappear {
-    from {
-
-        opacity: 1;
-    }
-    to {
-
-        opacity:0;
-    }
-}
 
 @keyframes lds-default {
     0%, 20%, 80%, 100% {
@@ -152,7 +142,17 @@ p{
     50% {
       transform: scale(1.5);
     }
-  }
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }    
+}
+
 /* ***************************************************************************************************************************** */
 
 .header {
@@ -207,14 +207,19 @@ p{
     border-radius: 16px;
     text-decoration: none;
     cursor: pointer;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.button__explore:hover{
+    filter: brightness(1.15);
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 .howToDo__section {
     padding: 20px 20px 0 20px;
 }
 
-.step__card{
-   
+.step__card{   
     display: flex;
     border-radius: 20px;
     padding: 15px 25px;
@@ -333,6 +338,7 @@ h5 {
     align-items: center;
 }
 
+
 .fa-heart{
     display: flex;
     justify-content: end;
@@ -340,23 +346,27 @@ h5 {
     position:absolute;
 }
 
-.fa-heart:hover{
-    color: rgba(0, 0, 255, 0.0);
-}
-
-.fa-heart:click{
-    color: rgb(147,86,220, 1);
-}
-
 .bb{
-    color: rgba(0, 0, 255, 0.0);
+    opacity: 0;
     position: relative;
     left: 15px;
-}
-
-.bb:hover{
+    z-index: 25;
     color: rgb(147,86,220, 1);
 }
+
+#like_button{
+    position: relative;
+    left: 33px;
+    z-index: 266;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#like_button:checked + .bb {
+    animation: fadein 1s;
+    animation-fill-mode: forwards;
+}
+
 
 footer {
     padding: 20px 25px 20px 25px;
