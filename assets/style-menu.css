@@ -52,6 +52,24 @@ section{
     padding: 0 10px;
 }
 
+.entrees, .plats, .desserts{
+    opacity: 0;
+}
+
+.entrees{
+    animation: fadein 500ms forwards ease-in-out;
+}
+
+.plats{
+    animation: fadein 500ms forwards ease-in-out;
+    animation-delay: 500ms;
+}
+
+.desserts{
+    animation: fadein 500ms forwards ease-in-out;
+    animation-delay: 1000ms;
+}
+
 .section__title{
     padding: 20px 0px 20px 10px;
     font-size: 14px;
@@ -66,13 +84,43 @@ section{
    
     display: flex;
     border-radius: 20px;
-    padding: 15px 15px 10px 10px;
+    padding: 0px 0px 0px 15px;
+    height: 70px;
     align-items: center;
     justify-content: start;
     margin-bottom: 15px;         
     flex-wrap: wrap;
     background-color: white;
     box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#order-action{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    left: 33px;
+    top: -20px;
+    z-index: 266;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#order-action:checked ~ .section__card__picked {
+    animation: validate 1000ms forwards ease-in-out;
+}
+
+#order-action:checked ~ .section__card__picked > .picked__logo{
+    animation: validate-rotate 500ms forwards ease-in-out;
+}
+
+#order-action:checked + .section__card_details {
+    animation: resize 1000ms forwards ease-in-out;
+}
+
+.section__card__global{
+    width: 100%;
+    position: relative;    
 }
 
 .section__card__name {
@@ -88,14 +136,34 @@ section{
 .section__card_details{
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
+
 .description{
     width: 80%;
 }
+
+.description > p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80%;
+}
+
 .price{
     display: flex;
     width: 20%;
-    justify-content: end;
+    justify-content: center;   
+}
+
+
+.section__card__picked{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    top: -20px;
+    right: -5rem;
+    background-color: green;  
 }
 
 .section__button{
@@ -103,6 +171,7 @@ section{
     justify-content: center;
     margin-bottom: 50px;
 }
+
 .button__command{
     border: none;
     color: white;
@@ -150,4 +219,42 @@ footer ul li {
 
 a:link {
     text-decoration: none;
+}
+
+@keyframes validate {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-5rem);
+    }
+}
+
+
+
+@keyframes validate-rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes resize{
+    from{
+        width: calc(100% - 5rem);
+    }
+    to {
+        width: calc(100% - 5rem);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
