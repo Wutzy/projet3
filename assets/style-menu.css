@@ -106,16 +106,16 @@ section{
     cursor: pointer;
 }
 
-#order-action:checked + .section__card__picked {
+#order-action:checked ~ .section__card__picked {
     animation: validate 1000ms forwards ease-in-out;
 }
 
-#order-action:checked + .section__card__picked > .picked__logo{
+#order-action:checked ~ .section__card__picked > .picked__logo{
     animation: validate-rotate 500ms forwards ease-in-out;
 }
 
 #order-action:checked + .section__card_details {
-    animation: resize 800ms forwards ease-in-out;
+    animation: resize 1000ms forwards ease-in-out;
 }
 
 .section__card__global{

@@ -402,7 +402,7 @@ a:link {
     text-decoration: none;
 }
 
-@media screen and (min-width: 992px)
+@media screen and (min-width: 768px)
 {
 
     
@@ -448,12 +448,20 @@ a:link {
 
     .cards__restaurant__group{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 20px;
     }
 
     .card{
-        width: 24%;
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 992px)
+{
+    .card{
+        width: 49%;
     }
 }
 
