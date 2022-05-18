@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
 
 *
 {
@@ -41,11 +42,25 @@ p{
     left: 10px;
 }
 
+.img-restaurant{
+    display: flex;
+    max-height: 300px;
+    width: 100%;
+}
+
+.img-restaurant img{
+    object-fit: cover;
+    width: 100%;
+}
+
 .header__title__menu{
     border-radius: 20px 20px 0px 0px;
     background-color: #f6f6f6;
-    padding: 15px 20px;
+    padding: 0px 20px;
     margin-top: -25px;
+}
+.header__title__menu h2{
+    font-family: "Shrikhand";
 }
 
 section{
@@ -111,7 +126,7 @@ section{
 }
 
 #order-action:checked ~ .section__card__picked > .picked__logo{
-    animation: validate-rotate 500ms forwards ease-in-out;
+    animation: validate-rotate 1000ms forwards ease-in-out;
 }
 
 #order-action:checked + .section__card_details {
@@ -156,6 +171,17 @@ section{
     justify-content: center;   
 }
 
+.picked__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-check-circle{
+    color: white;
+    font-size: 30px;
+}
+
 
 .section__card__picked{
     position: absolute;
@@ -163,7 +189,7 @@ section{
     width: 5rem;
     top: -20px;
     right: -5rem;
-    background-color: green;  
+    background-color: #99E2D0;  
 }
 
 .section__button{
@@ -219,6 +245,10 @@ footer ul li {
 
 a:link {
     text-decoration: none;
+}
+
+a:visited {
+    color: black;
 }
 
 @keyframes validate {
