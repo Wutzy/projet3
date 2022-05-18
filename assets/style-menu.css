@@ -46,6 +46,7 @@ p{
     display: flex;
     max-height: 300px;
     width: 100%;
+    object-fit: cover;
 }
 
 .img-restaurant img{
