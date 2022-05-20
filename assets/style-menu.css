@@ -54,12 +54,6 @@ p{
     width: 100%;
 }
 
-.header__title__menu{
-    border-radius: 20px 20px 0px 0px;
-    background-color: #f6f6f6;
-    padding: 0px 20px;
-    margin-top: -25px;
-}
 .header__title__menu h2{
     font-family: "Shrikhand";
 }
@@ -250,6 +244,78 @@ a:link {
 
 a:visited {
     color: black;
+}
+
+.badge_like{
+    display: flex;
+    justify-content: end;
+    padding: 0 20px 0 0;
+    width: 29%;
+    align-items: center;
+}
+
+
+.fa-heart{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position:absolute;
+}
+
+i {
+    font-size: 25px;
+}
+
+.bb{
+    opacity: 0;
+    position: relative;
+    left: 10px;
+    z-index: 25;
+    color: rgb(147,86,220, 1);
+}
+
+#like_button{
+    position: relative;
+    left: 33px;
+    z-index: 266;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#like_button:checked + .bb {
+    animation: fadein 1s;
+    animation-fill-mode: forwards;
+}
+
+.header__title__like {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #f6f6f6;
+    padding: 0px 20px;
+    margin-top: -25px;
+}
+
+
+@media screen and (min-width: 768px)
+{
+
+    .entrees, .plats, .desserts{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+            
+    }
+   
+    .section__card{
+        display: flex;
+        width: 30%;
+    }
+
+    .section__title{
+        width: 100%;
+    }
+
 }
 
 @keyframes validate {
