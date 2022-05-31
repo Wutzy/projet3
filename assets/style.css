@@ -353,7 +353,7 @@ h5 {
     color: rgb(147,86,220, 1);
 }
 
-#like_button{
+.like_button{
     position: relative;
     left: 33px;
     z-index: 266;
@@ -361,7 +361,7 @@ h5 {
     cursor: pointer;
 }
 
-#like_button:checked + .bb {
+.like_button:checked + .bb {
     animation: fadein 1s;
     animation-fill-mode: forwards;
 }
@@ -392,9 +392,13 @@ footer ul{
     padding: 0;
 }
 
-footer ul li {
+footer ul li a {
     margin-bottom: 5px;
     color: white;
+}
+
+.fa-hands-helping{
+    padding-right: 7px;
 }
 
 a:link {

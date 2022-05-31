@@ -58,6 +58,56 @@ p{
     font-family: "Shrikhand";
 }
 
+.header__title__like {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #f6f6f6;
+    padding: 0px 20px;
+    margin-top: -25px;
+}
+
+.badge_like{
+    display: flex;
+    justify-content: end;
+    padding: 0 20px 0 0;
+    width: 29%;
+    align-items: center;
+}
+
+
+.fa-heart{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position:absolute;
+}
+
+i {
+    font-size: 25px;
+}
+
+.bb{
+    opacity: 0;
+    position: relative;
+    left: 10px;
+    z-index: 25;
+    color: rgb(147,86,220, 1);
+}
+
+.like_button{
+    position: relative;
+    left: 33px;
+    z-index: 266;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.like_button:checked + .bb {
+    animation: fadein 1s;
+    animation-fill-mode: forwards;
+}
+
 section{
     padding: 0 10px;
 }
@@ -105,7 +155,7 @@ section{
     overflow: hidden;
 }
 
-#order-action{
+.order-action{
     position: absolute;
     width: 100%;
     height: 70px;
@@ -116,15 +166,15 @@ section{
     cursor: pointer;
 }
 
-#order-action:checked ~ .section__card__picked {
+.order-action:checked ~ .section__card__picked {
     animation: validate 1000ms forwards ease-in-out;
 }
 
-#order-action:checked ~ .section__card__picked > .picked__logo{
+.order-action:checked ~ .section__card__picked > .picked__logo{
     animation: validate-rotate 1000ms forwards ease-in-out;
 }
 
-#order-action:checked + .section__card_details {
+.order-action:checked + .section__card_details {
     animation: resize 1000ms forwards ease-in-out;
 }
 
@@ -179,6 +229,9 @@ section{
 
 
 .section__card__picked{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
     position: absolute;
     height: 5rem;
     width: 5rem;
@@ -203,6 +256,7 @@ section{
     text-decoration: none;
     cursor: pointer;
 }
+
 
 footer {
     padding: 20px 25px 20px 25px;
@@ -229,14 +283,27 @@ footer ul{
     padding: 0;
 }
 
-footer ul li {
+li i{
+    font-size: 15px;
+}
+
+footer ul li a {
     margin-bottom: 5px;
     color: white;
 }
 
-.fas {
+.fas{
     padding-right: 10px;
 }
+
+.fa-utensils{
+    padding-right: 15px;
+}
+
+.fa-hands-helping{
+    padding-right: 8px;
+}
+
 
 a:link {
     text-decoration: none;
@@ -245,57 +312,6 @@ a:link {
 a:visited {
     color: black;
 }
-
-.badge_like{
-    display: flex;
-    justify-content: end;
-    padding: 0 20px 0 0;
-    width: 29%;
-    align-items: center;
-}
-
-
-.fa-heart{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    position:absolute;
-}
-
-i {
-    font-size: 25px;
-}
-
-.bb{
-    opacity: 0;
-    position: relative;
-    left: 10px;
-    z-index: 25;
-    color: rgb(147,86,220, 1);
-}
-
-#like_button{
-    position: relative;
-    left: 33px;
-    z-index: 266;
-    opacity: 0;
-    cursor: pointer;
-}
-
-#like_button:checked + .bb {
-    animation: fadein 1s;
-    animation-fill-mode: forwards;
-}
-
-.header__title__like {
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px 20px 0px 0px;
-    background-color: #f6f6f6;
-    padding: 0px 20px;
-    margin-top: -25px;
-}
-
 
 @media screen and (min-width: 768px)
 {
