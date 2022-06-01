@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body{
+    margin: 10px 0 0 0;
+}
+
 p{
     margin: unset;
     font-size: 12px;
@@ -258,6 +262,10 @@ section{
     cursor: pointer;
 }
 
+.button__command:hover{
+    filter: brightness(1.15);
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
 
 footer {
     padding: 20px 25px 20px 25px;
@@ -334,6 +342,8 @@ a:visited {
     }
 
 }
+
+/******************************** ANIMATION CSS *********************************/
 
 @keyframes validate {
     from {
