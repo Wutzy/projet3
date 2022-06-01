@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap');
 
 *
 {
     font-family: "Roboto";
     box-sizing: border-box;
+}
+
+body{
+    margin: 10px 0 0 0;
 }
 
 p{
@@ -112,48 +117,6 @@ p{
     top: 52px;
     left: 62px;
   }
-
-
-
-/* ANIMATION CSS */
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-
-@keyframes fadeout {
-    from {
-        opacity:1;
-    }
-    to {
-        opacity:0;
-    }
-}
-
-
-@keyframes lds-default {
-    0%, 20%, 80%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.5);
-    }
-}
-
-@keyframes loading {
-    0% {
-        transform: scaleY(0);
-    }
-    100% {
-        transform: scaleY(1);
-    }    
-}
-
-/* ***************************************************************************************************************************** */
 
 .header {
     display:  flex;
@@ -354,7 +317,7 @@ h5 {
     color: rgb(147,86,220, 1);
 }
 
-#like_button{
+.like_button{
     position: relative;
     left: 33px;
     z-index: 266;
@@ -362,7 +325,7 @@ h5 {
     cursor: pointer;
 }
 
-#like_button:checked + .bb {
+.like_button:checked + .bb {
     animation: fadein 1s;
     animation-fill-mode: forwards;
 }
@@ -393,9 +356,13 @@ footer ul{
     padding: 0;
 }
 
-footer ul li {
+footer ul li a {
     margin-bottom: 5px;
     color: white;
+}
+
+.fa-hands-helping{
+    padding-right: 7px;
 }
 
 a:link {
@@ -461,7 +428,46 @@ a:link {
 @media screen and (min-width: 992px)
 {
     .card{
-        width: 49%;
+        width: 24%;
     }
+}
+
+/******************************** ANIMATION CSS *********************************/
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+
+
+@keyframes lds-default {
+    0%, 20%, 80%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }    
 }
 

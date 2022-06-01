@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Ohmyfood - A la française</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/assets/style-menu.css'>
-    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel='stylesheet' type='text/css' media='screen' href='../assets/style-menu.css'>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
     <script src="https://kit.fontawesome.com/e431db67f5.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,27 +16,39 @@
             <div class="header">
                <div class="header__navigation">
                 <div class="header__button__back">
-                    <i class="fas fa-arrow-left"></i>
+                    <a href="../index.html">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>    
                 </div>
                 <div class="header__logo">
-                    <img src="/assets/images/logo/ohmyfood.png" alt="">
+                    <img src="../assets/images/logo/ohmyfood.png" alt="">
                 </div>
                </div>
-                <img src="/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+               <div class="img-restaurant">
+                    <img src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+               </div>
+               <div class="header__title__like">
                 <div class="header__title__menu">
-                    <h2>A la française</h2>
+                    <h2>À la française</h2>
                 </div>
+                <div class="badge_like">
+                    <input type="checkbox" class="like_button">
+                    <i class="fas fa-heart bb"></i>
+                    <i class="far fa-heart"></i>                                                       
+                </div>
+            </div>
             </div>
         </header>        
         <section class="entrees">
             <div class="section__title">
-                <p><span class="section__title_border">ENTR</span><span>EES</span></p>
+                <p><span class="section__title_border">ENTR</span><span>ÉES</span></p>
             </div>
             <div class="section__card">
                 <div class="section__card__global">
                     <div class="section__card__name">
                         <p>Tartare de poulpe acidulé</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Aux zestes d'orange</p>
@@ -44,11 +56,10 @@
                         <div class="price">
                             <p>25€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div>     
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -58,18 +69,18 @@
                     <div class="section__card__name">
                         <p>Velouté de légumes d'antan</p>
                     </div>
+                    <input type="checkbox" class="order-action"> 
                     <div class="section__card_details">
                         <div class="description">
-                            <p>Carotte, panais, topinambourCarotte, panais, topinambour</p>
+                            <p>Carotte, panais, topinambour</p>
                         </div>
                         <div class="price">
                             <p>35€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div>    
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -79,6 +90,7 @@
                     <div class="section__card__name">
                         <p>Soupe à l'oignon</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Revisitée</p>
@@ -86,11 +98,10 @@
                         <div class="price">
                             <p>20€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div> 
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -105,6 +116,7 @@
                     <div class="section__card__name">
                         <p>Coquilles Saint-Jacques</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Accompagnées d'une purée de panais</p>
@@ -112,11 +124,10 @@
                         <div class="price">
                             <p>40€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div> 
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -125,6 +136,7 @@
                     <div class="section__card__name">
                         <p>Magret de canard</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Et parmentier de pommes de terre</p>
@@ -132,11 +144,10 @@
                         <div class="price">
                             <p>35€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div> 
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -145,6 +156,7 @@
                     <div class="section__card__name">
                         <p>Pigeonneau d’Ille-et-Vilaine</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Sur son lit de gnocchis aux légumes</p>
@@ -152,11 +164,10 @@
                         <div class="price">
                             <p>44€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div> 
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -164,13 +175,14 @@
         </section>
         <section class="desserts">
             <div class="section__title">
-                <p><span class="section__title_border">DESS</span><span>ERT</span></p>
+                <p><span class="section__title_border">DESS</span><span>ERTS</span></p>
             </div>
             <div class="section__card">
                 <div class="section__card__global">
                     <div class="section__card__name">
                         <p>Pétales de violettes glacés</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Et purée de noisettes</p>
@@ -178,11 +190,10 @@
                         <div class="price">
                             <p>18€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div> 
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -192,6 +203,7 @@
                     <div class="section__card__name">
                         <p>Fondant au chocolat</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Revisité</p>
@@ -199,11 +211,10 @@
                         <div class="price">
                             <p>22€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div> 
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -213,6 +224,7 @@
                     <div class="section__card__name">
                         <p>Millefeuille croustillant</p>
                     </div>
+                    <input type="checkbox" class="order-action">
                     <div class="section__card_details">
                         <div class="description">
                             <p>Myrtilles et pâte d’amande</p>
@@ -220,11 +232,10 @@
                         <div class="price">
                             <p>23€</p>
                         </div>
-                    </div>
-                    <input type="checkbox" id="order-action"> 
-                    <div class="section__card__picked" style="display: flex;align-items: center; justify-content: center;">
+                    </div> 
+                    <div class="section__card__picked">
                         <div class="picked__logo">
-                            V
+                            <i class="fas fa-check-circle"></i>
                         </div>
                     </div> 
                 </div>                            
@@ -237,21 +248,13 @@
         </section>
         <footer>
             <div class="footer__logo">
-                <img src="/assets/images/logo/ohmyfood@2x.svg" class="footer__logo__image-color" alt="">
+                <img src="../assets/images/logo/ohmyfood@2x.svg" class="footer__logo__image-color" alt="">
             </div>
-            <ul class="footer__list">
-                <a href="#">
-                    <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
-                </a>
-                <a href="#">
-                    <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-                </a>
-                <a href="#">
-                    <li>Mentions légales</li>
-                </a>
-                <a href="#">
-                    <li>Contact</li>
-                </a>                
+            <ul class="footer__list">               
+                    <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+                    <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="mailto:ohmyfood_contact@gmail.com">Contact</a></li>             
             </ul>
         </footer>        
     </div>    
